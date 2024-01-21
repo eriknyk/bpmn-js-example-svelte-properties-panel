@@ -1,0 +1,37 @@
+{
+  "name": "bpmn-js-example-svelte-properties-panel",
+  "version": "0.0.1",
+  "author": {
+    "name": "Erik Amaru Ortiz",
+    "url": "https://github.com/eriknyk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eriknyk/bpmn-js-example-svelte-properties-panel"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+  },
+  "devDependencies": {
+    "@fontsource/fira-mono": "^4.5.10",
+    "@neoconfetti/svelte": "^1.0.0",
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "bpmn-js": "^16.3.2",
+    "prettier": "^3.0.3",
+    "prettier-plugin-svelte": "^3.0.3",
+    "svelte": "^4.2.7",
+    "svelte-check": "^3.6.0",
+    "tslib": "^2.4.1",
+    "typescript": "^5.0.0",
+    "vite-raw-plugin": "^1.0.2",
+    "vite": "^5.0.3"
+  },
+  "type": "module"
+}
