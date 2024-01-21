@@ -87,7 +87,7 @@
   }
 </script>
 
-<div class="element-properties" key={element.id}>
+<div class="element-properties">
   <fieldset>
     <label>id</label>
     <span>{element.id}</span>

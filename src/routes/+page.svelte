@@ -2,18 +2,15 @@
   import { browser } from "$app/environment";
   //@ts-ignore
   import diagramXml from "./diagram.bpmn";
+  import "./styles.css";
 
-  const ModelerConstructor = browser
+  const modelerPromise = browser
     ? import("./modeler.svelte").then((module) => module.default)
     : new Promise<ConstructorOfATypedSvelteComponent>(() => {});
-
-  import "./styles.css";
 </script>
 
-{#await ModelerConstructor}
-  <p>Loading...</p>
-{:then component}
+<!-- We need import dynamically the modeler component to avoid the SSR error -->
+<!-- modeler can only be rendered on client side -->
+{#await modelerPromise then component}
   <svelte:component this={component} {diagramXml} />
-{:catch error}
-  <span>Something went wrong: {error.message}</span>
 {/await}
